@@ -4,28 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>隨堂烤｜東石烤蚵吃到飽</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Noto Sans TC',sans-serif;
 }
-
 body{
 background:#f7fbff;
 color:#333;
 line-height:1.7;
 }
-
-/* NAVBAR */
-
+/* NAV */
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -37,408 +32,182 @@ position:sticky;
 top:0;
 z-index:1000;
 }
-
-.logo{
-font-size:20px;
-font-weight:700;
-color:#0284c7;
-}
-
-.nav-links{
-display:flex;
-gap:20px;
-}
-
+.logo{font-size:20px;font-weight:700;color:#0284c7;}
+.nav-links{display:flex;gap:20px;}
 .nav-links a{
-text-decoration:none;
-color:#333;
-font-size:14px;
-}
-
-.nav-links a:hover{
-color:#0284c7;
-}
-
+text-decoration:none;color:#333;font-size:14px;}
+.nav-links a:hover{color:#0284c7;}
 /* HERO */
-
 .hero{
-height:420px;
-background:url('https://images.unsplash.com/photo-1559339352-11d035aa65de') center/cover;
+height:350px;
+background:url("https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/298918133_881361004665661_7581030981325540345_n.jpg") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
-
 .hero h1{
-font-size:42px;
-color:white;
-background:rgba(0,0,0,0.45);
-padding:15px 30px;
-border-radius:8px;
+font-size:38px;color:white;
+background:rgba(0,0,0,0.4);
+padding:12px 25px;border-radius:8px;
 }
-
 /* SECTION */
-
-section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
-}
-
-.title{
-text-align:center;
-font-size:30px;
-margin-bottom:40px;
-color:#0284c7;
-}
-
+section{max-width:1100px;margin:auto;padding:55px 20px;}
+.title{text-align:center;font-size:30px;margin-bottom:30px;color:#0284c7;}
 /* ABOUT */
-
-.about{
-text-align:center;
-max-width:750px;
-margin:auto;
-font-size:16px;
-}
-
+.about{font-size:16px;text-align:center;max-width:750px;margin:auto;}
 /* PRICE */
-
 .price-box{
-background:#0284c7;
-color:white;
-padding:25px;
-border-radius:10px;
-text-align:center;
-margin-bottom:40px;
-font-size:16px;
+background:#0284c7;color:white;
+padding:22px;border-radius:10px;
+text-align:center;margin-bottom:35px;font-size:16px;
 }
-
 /* MENU */
-
 .food-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
-
 .food-card{
-background:white;
-border-radius:12px;
+background:white;border-radius:10px;
 overflow:hidden;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-transition:.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 }
-
-.food-card:hover{
-transform:translateY(-5px);
-}
-
 .food-card img{
-width:100%;
-height:180px;
-object-fit:cover;
+width:100%;height:180px;object-fit:cover;
 }
-
 .food-card h4{
-padding:12px;
-text-align:center;
-color:#0ea5a5;
+padding:10px;text-align:center;color:#0ea5a5;
 }
-
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:8px;
-}
-
-/* SAFETY */
-
-.safety{
-text-align:center;
-font-size:16px;
-line-height:1.9;
-}
-
-/* LOCATION */
-
-.location{
-text-align:center;
-font-size:16px;
-line-height:1.9;
-}
-
 /* MAP */
-
-.map{
-margin-top:20px;
-}
-
 .map iframe{
-width:100%;
-height:300px;
-border:0;
-border-radius:10px;
+width:100%;height:280px;border:0;border-radius:10px;
 }
-
 /* FOOTER */
-
 footer{
-background:#0f172a;
-color:#aaa;
-padding:18px;
-margin-top:40px;
+background:#0f172a;color:#aaa;padding:18px;margin-top:35px;
 }
-
 .footer{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-font-size:13px;
+max-width:1100px;margin:auto;
+display:flex;justify-content:space-between;flex-wrap:wrap;font-size:13px;
 }
-
+.footer a{color:#ccc;text-decoration:none;}
+.footer a:hover{color:white;}
 /* MOBILE */
-
 @media(max-width:768px){
-
-.navbar{
-padding:12px 20px;
+.navbar{padding:12px 18px;}
+.hero{height:250px;}
+.hero h1{font-size:24px;}
+.title{font-size:24px;}
+section{padding:40px 18px;}
 }
-
-.logo{
-font-size:18px;
-}
-
-.nav-links a{
-font-size:13px;
-}
-
-.hero{
-height:300px;
-}
-
-.hero h1{
-font-size:24px;
-}
-
-.title{
-font-size:23px;
-}
-
-section{
-padding:50px 18px;
-}
-
-.food-card img{
-height:150px;
-}
-
-.gallery img{
-height:150px;
-}
-
-.footer{
-flex-direction:column;
-text-align:center;
-gap:6px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
+<!-- NAV -->
 <div class="navbar">
-
 <div class="logo">隨堂烤</div>
-
 <div class="nav-links">
 <a href="#about">關於我們</a>
 <a href="#menu">菜單</a>
-<a href="#gallery">餐廳照片</a>
 <a href="#location">店家資訊</a>
+<a href="#facebook">FB 照片</a>
 </div>
-
 </div>
 
 <!-- HERO -->
-
 <div class="hero">
 <h1>東石炭火烤蚵吃到飽</h1>
 </div>
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <h2 class="title">關於我們</h2>
-
 <div class="about">
-
-隨堂烤位於嘉義東石，是主打炭火海鮮與烤蚵吃到飽的海鮮餐廳。  
-
-東石以盛產鮮甜肥美的蚵仔聞名，我們希望每一位來到這裡的旅客，
-都能用最實惠的價格，享受到最道地的新鮮海味。
-
-在海風與炭火香氣之中，
-享受最純粹的東石海鮮。
-
+隨堂烤位於嘉義東石，是主打炭火鮮蚵吃到飽的海鮮餐廳。  
+東石是台灣重要的蚵仔產地，所有料理使用產地直送海鮮、炭火現烤，讓每一位饕客都吃得到最新鮮的海味。 [oai_citation:2‡Fonfood瘋美食](https://www.fonfood.com/store/788524?utm_source=chatgpt.com)
 </div>
-
 </section>
 
 <!-- MENU -->
-
 <section id="menu">
-
 <h2 class="title">菜單</h2>
-
 <div class="price-box">
-
 <b>烤蚵吃到飽</b><br><br>
-
-100cm 以下 免費<br>
-100cm ～ 130cm 100元<br>
-130cm 以上 200元
-
+100cm 以下：免費<br>
+100cm ～ 130cm：100元<br>
+130cm 以上：200元
 </div>
-
 <div class="food-grid">
 
 <div class="food-card">
-<img src="https://images.unsplash.com/photo-1604908177070-6c0d9a8c12b6">
+<img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/298918133_881361004665661_7581030981325540345_n.jpg">
 <h4>炭烤蚵仔</h4>
 </div>
 
 <div class="food-card">
-<img src="https://images.unsplash.com/photo-1617196038435-dba3c6f9b8d1">
+<img src="https://scontent.ftpe8-2.fna.fbcdn.net/v/t39.30808-6/298889331_881361044665657_465373519612635411_n.jpg">
 <h4>烤胡椒魚</h4>
 </div>
 
 <div class="food-card">
-<img src="https://images.unsplash.com/photo-1625944238462-7c3cde9f59ef">
-<h4>鮮蝦</h4>
+<img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/298919789_881361024665659_5268537345268662764_n.jpg">
+<h4>鮮蝦料理</h4>
 </div>
 
 <div class="food-card">
-<img src="https://images.unsplash.com/photo-1598514982841-9fc0d8b6e9d3">
+<img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/298919789_881361024665659_5268537345268662764_n.jpg">
 <h4>烤鳳螺</h4>
 </div>
 
 <div class="food-card">
-<img src="https://images.unsplash.com/photo-1559847844-d721426d6edc">
+<img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/298918133_881361004665661_7581030981325540345_n.jpg">
 <h4>紅糟鰻</h4>
 </div>
 
 </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-<h2 class="title">餐廳照片</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
-<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
-<img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2">
-<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9">
-
-</div>
-
-</section>
-
-<!-- FOOD SAFETY -->
-
-<section>
-
-<h2 class="title">食品安全</h2>
-
-<div class="safety">
-
-✔ 每日採購新鮮東石海鮮  
-✔ 食材低溫保存管理  
-✔ 烤爐與設備定期清潔  
-✔ 嚴格控管食材來源  
-✔ 維持乾淨整潔的用餐環境  
-
-</div>
-
 </section>
 
 <!-- LOCATION -->
-
 <section id="location">
-
 <h2 class="title">店家資訊</h2>
-
 <div class="location">
-
-<p><b>📍 地址</b><br>
-嘉義縣東石鄉白水湖36號</p>
-
-<br>
-
+<p><b>📍 地址</b><br>嘉義縣東石鄉白水湖36號</p><br>
 <p><b>🕐 營業時間</b></p>
-
-<p>
-平日：11:00 ～ 19:00<br>
-假日：10:30 ～ 20:00
-</p>
-
+<p>平日：11:00 ～ 19:00<br>假日：10:30 ～ 20:00</p>
 </div>
-
 <div class="map">
-
 <iframe src="https://maps.google.com/maps?q=嘉義縣東石鄉白水湖36號&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-
 </div>
-
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
 <div class="footer">
 
-<div>隨堂烤</div>
-
-<div>嘉義縣東石鄉白水湖36號</div>
-
-<div>平日11:00-19:00｜假日10:30-20:00</div>
+<div>
+<div><b>📌 官方 Facebook</b></div>
+<a href="https://www.facebook.com/100083753091259/" target="_blank">隨堂烤粉絲團</a>
+</div>
 
 <div>
-<a href="https://www.facebook.com/share/1Fn9MG16UK/?mibextid=wwXIfr" target="_blank" style="color:#aaa; text-decoration:none;">
-官方 Facebook 粉絲團
-</a>
+<div><b>📍 地址</b></div>
+嘉義縣東石鄉白水湖36號
+</div>
+
+<div>
+<div><b>🕐 營業時間</b></div>
+平日11:00–19:00<br>
+假日10:30–20:00
 </div>
 
 </div>
 
-<div style="text-align:center; margin-top:10px; font-size:12px; opacity:0.8;">
+<div style="text-align:center;margin-top:12px;font-size:12px;opacity:0.8;">
 © 2026 隨堂烤 All Rights Reserved
 </div>
-
 </footer>
 
 </body>
