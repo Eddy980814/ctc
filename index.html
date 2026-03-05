@@ -19,7 +19,7 @@ font-family:'Noto Sans TC',sans-serif;
 }
 
 body{
-background:#f6fbff;
+background:#f7fbff;
 color:#333;
 line-height:1.7;
 }
@@ -35,7 +35,7 @@ background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
-z-index:999;
+z-index:1000;
 }
 
 .logo{
@@ -62,19 +62,20 @@ color:#0284c7;
 /* HERO */
 
 .hero{
-padding:110px 20px;
+height:420px;
+background:url('https://images.unsplash.com/photo-1559339352-11d035aa65de') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:linear-gradient(135deg,#0284c7,#0ea5a5);
-color:white;
 }
 
 .hero h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:18px;
+font-size:42px;
+color:white;
+background:rgba(0,0,0,0.45);
+padding:15px 30px;
+border-radius:8px;
 }
 
 /* SECTION */
@@ -95,9 +96,9 @@ color:#0284c7;
 /* ABOUT */
 
 .about{
-max-width:700px;
-margin:auto;
 text-align:center;
+max-width:750px;
+margin:auto;
 font-size:16px;
 }
 
@@ -117,16 +118,15 @@ font-size:16px;
 
 .food-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px;
 }
 
 .food-card{
 background:white;
 border-radius:12px;
-padding:25px;
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
-text-align:center;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:.3s;
 }
 
@@ -134,9 +134,31 @@ transition:.3s;
 transform:translateY(-5px);
 }
 
+.food-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
 .food-card h4{
-margin-bottom:8px;
+padding:12px;
+text-align:center;
 color:#0ea5a5;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
 }
 
 /* SAFETY */
@@ -155,12 +177,26 @@ font-size:16px;
 line-height:1.9;
 }
 
+/* MAP */
+
+.map{
+margin-top:20px;
+}
+
+.map iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:10px;
+}
+
 /* FOOTER */
 
 footer{
 background:#0f172a;
 color:#aaa;
-padding:18px 15px;
+padding:18px;
+margin-top:40px;
 }
 
 .footer{
@@ -189,15 +225,11 @@ font-size:13px;
 }
 
 .hero{
-padding:80px 20px;
+height:300px;
 }
 
 .hero h1{
-font-size:26px;
-}
-
-.hero p{
-font-size:15px;
+font-size:24px;
 }
 
 .title{
@@ -208,8 +240,12 @@ section{
 padding:50px 18px;
 }
 
-.food-card{
-padding:18px;
+.food-card img{
+height:150px;
+}
+
+.gallery img{
+height:150px;
 }
 
 .footer{
@@ -221,6 +257,7 @@ gap:6px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -229,14 +266,12 @@ gap:6px;
 
 <div class="navbar">
 
-<div class="logo">
-隨堂烤
-</div>
+<div class="logo">隨堂烤</div>
 
 <div class="nav-links">
 <a href="#about">關於我們</a>
 <a href="#menu">菜單</a>
-<a href="#safety">食品安全</a>
+<a href="#gallery">餐廳照片</a>
 <a href="#location">店家資訊</a>
 </div>
 
@@ -245,11 +280,7 @@ gap:6px;
 <!-- HERO -->
 
 <div class="hero">
-
-<h1>200元烤蚵吃到飽</h1>
-
-<p>嘉義東石新鮮蚵仔・炭火海鮮</p>
-
+<h1>東石炭火烤蚵吃到飽</h1>
 </div>
 
 <!-- ABOUT -->
@@ -260,12 +291,13 @@ gap:6px;
 
 <div class="about">
 
-隨堂烤位於嘉義東石漁港附近，  
-主打東石在地最新鮮的蚵仔與海鮮。  
+隨堂烤位於嘉義東石，是主打炭火海鮮與烤蚵吃到飽的海鮮餐廳。  
 
-我們希望讓每一位來到東石的旅客，  
-都能用最平實的價格，  
-享受最純粹的海味。
+東石以盛產鮮甜肥美的蚵仔聞名，我們希望每一位來到這裡的旅客，
+都能用最實惠的價格，享受到最道地的新鮮海味。
+
+在海風與炭火香氣之中，
+享受最純粹的東石海鮮。
 
 </div>
 
@@ -290,47 +322,64 @@ gap:6px;
 <div class="food-grid">
 
 <div class="food-card">
-<h4>🦪 炭烤蚵仔</h4>
-<p>東石蚵仔吃到飽</p>
+<img src="https://images.unsplash.com/photo-1604908177070-6c0d9a8c12b6">
+<h4>炭烤蚵仔</h4>
 </div>
 
 <div class="food-card">
-<h4>🐟 烤胡椒魚</h4>
-<p>店內招牌料理</p>
+<img src="https://images.unsplash.com/photo-1617196038435-dba3c6f9b8d1">
+<h4>烤胡椒魚</h4>
 </div>
 
 <div class="food-card">
-<h4>🦐 鮮蝦</h4>
-<p>新鮮海蝦</p>
+<img src="https://images.unsplash.com/photo-1625944238462-7c3cde9f59ef">
+<h4>鮮蝦</h4>
 </div>
 
 <div class="food-card">
-<h4>🐚 烤鳳螺</h4>
-<p>海味濃郁</p>
+<img src="https://images.unsplash.com/photo-1598514982841-9fc0d8b6e9d3">
+<h4>烤鳳螺</h4>
 </div>
 
 <div class="food-card">
-<h4>🐟 紅糟鰻</h4>
-<p>外酥內嫩</p>
+<img src="https://images.unsplash.com/photo-1559847844-d721426d6edc">
+<h4>紅糟鰻</h4>
 </div>
 
 </div>
 
 </section>
 
-<!-- SAFETY -->
+<!-- GALLERY -->
 
-<section id="safety">
+<section id="gallery">
+
+<h2 class="title">餐廳照片</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+<img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9">
+
+</div>
+
+</section>
+
+<!-- FOOD SAFETY -->
+
+<section>
 
 <h2 class="title">食品安全</h2>
 
 <div class="safety">
 
-✔ 每日新鮮採購海鮮  
-✔ 食材低溫保存  
-✔ 烤爐定期清潔  
+✔ 每日採購新鮮東石海鮮  
+✔ 食材低溫保存管理  
+✔ 烤爐與設備定期清潔  
 ✔ 嚴格控管食材來源  
-✔ 維持環境整潔
+✔ 維持乾淨整潔的用餐環境  
 
 </div>
 
@@ -344,21 +393,29 @@ gap:6px;
 
 <div class="location">
 
-📍 嘉義縣東石鄉白水湖36號
+<p><b>📍 地址</b><br>
+嘉義縣東石鄉白水湖36號</p>
 
-<br><br>
+<br>
 
-🕐 營業時間  
-10:00 ～ 19:00
+<p><b>🕐 營業時間</b></p>
 
-<br><br>
+<p>
+平日：11:00 ～ 19:00<br>
+假日：10:30 ～ 20:00
+</p>
 
-🌊 東石海港海味  
-🦪 烤蚵吃到爽
+</div>
+
+<div class="map">
+
+<iframe src="https://maps.google.com/maps?q=嘉義縣東石鄉白水湖36號&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -368,10 +425,18 @@ gap:6px;
 
 <div>嘉義縣東石鄉白水湖36號</div>
 
-<div>10:00 - 19:00</div>
+<div>平日11:00-19:00｜假日10:30-20:00</div>
 
-<div>© 2026</div>
+<div>
+<a href="https://www.facebook.com/share/1Fn9MG16UK/?mibextid=wwXIfr" target="_blank" style="color:#aaa; text-decoration:none;">
+官方 Facebook 粉絲團
+</a>
+</div>
 
+</div>
+
+<div style="text-align:center; margin-top:10px; font-size:12px; opacity:0.8;">
+© 2026 隨堂烤 All Rights Reserved
 </div>
 
 </footer>
